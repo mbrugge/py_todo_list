@@ -8,7 +8,13 @@ while True:
         "2. List tasks\n"
         "3. Remove task\n")
 
-    select = int(input("Select operation (0-3): "))
+    # Ensures a number is input.
+    while True:
+        try:
+            select = int(input("Select operation (0-3): "))
+            break
+        except ValueError:
+            print("Invalid input! Please, enter a number.")
 
     if select == 0:
         print("Exiting program . . .")
